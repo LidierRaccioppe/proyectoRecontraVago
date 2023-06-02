@@ -1,5 +1,8 @@
 package Model;
 
+/**
+ * Clase de Usuario
+ */
 public class Usuario {
     /**
      * Nombre del usuario e identificador
