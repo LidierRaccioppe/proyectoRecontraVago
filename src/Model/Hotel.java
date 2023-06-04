@@ -1,5 +1,8 @@
 package Model;
 
+/**
+ * Clase de Hotel, que hereda de Edificio y ofresen pisos y calidad de servicios
+ */
 public class Hotel extends Edificio{
     /**
      * Número de pisos que tiene el edificio
