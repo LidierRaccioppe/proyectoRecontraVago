@@ -24,5 +24,5 @@ public class Edificio {
     /**
      * Número de Habitaciones disponibles del edificio
      */
-    private int numHabitaciones;
+    private int numHabitacionesDisponibles;
 }
