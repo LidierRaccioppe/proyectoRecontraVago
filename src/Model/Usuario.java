@@ -20,7 +20,7 @@ public class Usuario {
     }
 
     /**
-     * Constructor vacío de Usuario
+     * Constructor no vacio de Usuario
      * @param nombreUsuario Nombre del usuario e identificador
      * @param contraseña Clave al momento de loggearse
      */
