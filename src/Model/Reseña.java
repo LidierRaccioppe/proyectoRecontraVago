@@ -14,7 +14,7 @@ public class Reseña {
     private String nombreRecidencia;
 
     /**
-     * valoración que dio el usuario a la recidencia
+     * valoración que dio el usuario a la recidencia, este va de 0 a 10
      */
     private float estrellasUsuario;
     /**
