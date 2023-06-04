@@ -5,7 +5,7 @@ package Model;
  */
 public class CasaApartamento extends Edificio{
     /**
-     * Distancia que tiene con el centro de la urbanizacion
+     * Distancia que tiene con el centro de la urbanizacion, esto es en kilometros
      */
     private float distanciaCentro;
 
@@ -49,5 +49,21 @@ public class CasaApartamento extends Edificio{
      * Constructor vacio de CasaApartamento y sin valores de Edificio
      */
     public CasaApartamento() {
+    }
+
+    /**
+     * Obtiene la distancia con respecto al centro de la CasaAparamento
+     * @return distanciaCentro que tiene la CasaAparamento con respecto al centro
+     */
+    public float getDistanciaCentro() {
+        return distanciaCentro;
+    }
+
+    /**
+     * establece la distancia con respecto al centro de la CasaAparamento
+     * @param distanciaCentro el float que queremos que sea la nueva distancia al centro con respecto a la CasaAparamento
+     */
+    public void setDistanciaCentro(float distanciaCentro) {
+        this.distanciaCentro = distanciaCentro;
     }
 }
