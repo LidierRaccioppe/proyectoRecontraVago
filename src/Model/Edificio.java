@@ -22,7 +22,7 @@ public class Edificio {
      */
     private int estrellasUsuario;
     /**
-     * Número de Habitaciones disponibles del edificio
+     * Número de Habitaciones totales del edificio
      */
-    private int numHabitacionesDisponibles;
+    private int numHabitacionesTotales;
 }
