@@ -1,5 +1,8 @@
 package Model;
 
+/**
+ * Clase de Edificio, la base para Hoteles y casaApartamento
+ */
 public class Edificio {
     /**
      * Nombre del edificio e identificador
