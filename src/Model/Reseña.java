@@ -12,4 +12,9 @@ public class Reseña {
      * nombre de la recidencia para la que se hizo la reseña
      */
     private String nombreRecidencia;
+
+    /**
+     * valoración que dio el usuario a la recidencia
+     */
+    private float estrellasUsuario;
 }
