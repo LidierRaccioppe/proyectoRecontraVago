@@ -17,4 +17,8 @@ public class Edificio {
      * Precio que tiene la habitacion promedio del edificio
      */
     private float precioHabitacionPromedio;
+    /**
+     * Promedio de la estancia en el edificio dada por usuario comunes
+     */
+    private int estrellasUsuario;
 }
