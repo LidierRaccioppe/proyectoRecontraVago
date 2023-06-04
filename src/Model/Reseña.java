@@ -8,4 +8,8 @@ public class Reseña {
      * nombre del usuario que hizo la reseña
      */
     private String nombreUsuario;
+    /**
+     * nombre de la recidencia para la que se hizo la reseña
+     */
+    private String nombreRecidencia;
 }
