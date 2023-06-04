@@ -31,7 +31,7 @@ public class Edificio {
      * @param nombreRecidencia nombre e identificador del Edificio
      * @param calle calle en la que se encuentra el Edificio
      * @param numEdificioCalle número correspondiente del Edificio en la calle que se encuentra
-     * @param precioHabitacion el precio de las habitaciones del hotel
+     * @param precioHabitacion el precio de las habitaciones del edificio
      * @param estrellasUsuario la valoracion que le dieron los usuarios al edificio
      * @param numHabitacionesTotales el numero total de habitaciones que tiene el hotel
      */
