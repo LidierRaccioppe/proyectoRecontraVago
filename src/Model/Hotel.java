@@ -49,4 +49,36 @@ public class Hotel extends Edificio{
     public Hotel(String nombreRecidencia, String calle, int numEdificioCalle, float precioHabitacion, int estrellasUsuario, int numHabitacionesTotales) {
         super(nombreRecidencia, calle, numEdificioCalle, precioHabitacion, estrellasUsuario, numHabitacionesTotales);
     }
+
+    /**
+     * Obtiene el número de pisos del Hotel
+     * @return numPisos que el edificio/recidencia tiene
+     */
+    public int getNumPisos() {
+        return numPisos;
+    }
+
+    /**
+     * establece el número de pisos del Hotel
+     * @param numPisos el int que queremos que sea el nuevo número de pisos del Hotel
+     */
+    public void setNumPisos(int numPisos) {
+        this.numPisos = numPisos;
+    }
+
+    /**
+     * Obtiene la calidad de los servicios del Hotel
+     * @return calidadServicios que el edificio/recidencia tiene
+     */
+    public float getCalidadServicios() {
+        return calidadServicios;
+    }
+
+    /**
+     * establece el número de pisos del Hotel
+     * @param calidadServicios el float que queremos que sea la nueva calidad de los servicios del Hotel
+     */
+    public void setCalidadServicios(float calidadServicios) {
+        this.calidadServicios = calidadServicios;
+    }
 }
