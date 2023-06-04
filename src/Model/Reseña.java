@@ -17,4 +17,8 @@ public class Reseña {
      * valoración que dio el usuario a la recidencia
      */
     private float estrellasUsuario;
+    /**
+     * opinion que deja el Usuario sobre la recidencia
+     */
+    private String comentarioReseña;
 }
