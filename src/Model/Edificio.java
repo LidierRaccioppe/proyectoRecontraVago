@@ -13,4 +13,8 @@ public class Edificio {
      * Número del edificio en la calle
      */
     private int numEdificioCalle;
+    /**
+     * Precio que tiene la habitacion promedio del edificio
+     */
+    private float precioHabitacionPromedio;
 }
