@@ -122,8 +122,7 @@ public class Modelo extends Observable {
             }
             setChanged();
             notifyObservers(hoteles.size());
-        }
-        } catch (Exception e) {
+        }} catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Hubo un error en el mostrar"+e.getMessage());
         } finally {
             try {
