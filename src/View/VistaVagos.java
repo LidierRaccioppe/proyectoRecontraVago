@@ -4,11 +4,16 @@
  */
 package View;
 
+import Controller.Main;
+
+import javax.swing.*;
+
 /**
  * Clase VistaVagos, para ver el programa, le tome de NetBeans, cualquier problema visual viene de el
  */
 public class VistaVagos extends javax.swing.JFrame {
 
+    Main palanca = new Main();
     /**
      * Creates new form VistaVagos
      */
@@ -448,19 +453,19 @@ public class VistaVagos extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void botonReseñaSubirComentarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonReseñaSubirComentarioActionPerformed
-        // TODO add your handling code here:
+        palanca.insertarReseña(textoNombreUsuario, textoEdificioNombre, textoReseñaValoracion, campoReseñeaComentario);
     }//GEN-LAST:event_botonReseñaSubirComentarioActionPerformed
 
     private void botonNuevoUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonNuevoUsuarioActionPerformed
-        // TODO add your handling code here:
+        palanca.insertarUsuario(textoNombreUsuario, textoContraseñaUsuario);
     }//GEN-LAST:event_botonNuevoUsuarioActionPerformed
 
     private void botonEdificioListarEdificioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEdificioListarEdificioActionPerformed
-
+        palanca.mostarHoteles();
     }//GEN-LAST:event_botonEdificioListarEdificioActionPerformed
 
     private void botonEdificioListarReseñasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEdificioListarReseñasActionPerformed
-        // TODO add your handling code here:
+        palanca.mostrarReseña( textoNombreUsuario, textoEdificioNombre);
     }//GEN-LAST:event_botonEdificioListarReseñasActionPerformed
 
     private void textoContraseñaUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textoContraseñaUsuarioActionPerformed
