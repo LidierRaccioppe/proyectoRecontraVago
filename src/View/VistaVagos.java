@@ -4,11 +4,14 @@
  */
 package View;
 
+import Controller.Main;
+
 /**
  * Clase VistaVagos, para ver el programa, le tome de NetBeans, cualquier problema visual viene de el
  */
 public class VistaVagos extends javax.swing.JFrame {
 
+    Main palanca = new Main();
     /**
      * Creates new form VistaVagos
      */
@@ -448,7 +451,7 @@ public class VistaVagos extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void botonReseñaSubirComentarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonReseñaSubirComentarioActionPerformed
-        // TODO add your handling code here:
+        palanca.insertarReseña(textoNombreUsuario, textoEdificioNombre, textoReseñaValoracion, campoReseñeaComentario);
     }//GEN-LAST:event_botonReseñaSubirComentarioActionPerformed
 
     private void botonNuevoUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonNuevoUsuarioActionPerformed
