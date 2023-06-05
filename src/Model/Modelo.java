@@ -1,4 +1,7 @@
 package Model;
+import com.lidier.validar.Excepcion;
+import com.lidier.validar.Validaciones;
+
 import static java.lang.Integer.parseInt;
 import javax.swing.JTextField;
 import javax.swing.JPasswordField;
@@ -81,7 +84,11 @@ public class Modelo extends Observable {
             sean llenados en el orden de los numero que pondremos ahora*/
             cs.setString (1, res.getNombreUsuario());
             cs.setString (2, res.getNombreRecidencia());
-            cs.setString (2, Float.toString(res.getEstrellasUsuario()));
+            try{
+                cs.setString (2,Float.toString(Validaciones.floatValido0Hasta10(res.getEstrellasUsuario())));
+            }catch(Excepcion ex){
+                System.out.println("error"+ex.getMessage());
+            }
             cs.setString (2, res.getComentarioReseña());
             // Ejecutara todas la linea preparadas disponibles en orden
             cs.execute();
