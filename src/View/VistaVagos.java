@@ -455,7 +455,7 @@ public class VistaVagos extends javax.swing.JFrame {
     }//GEN-LAST:event_botonReseñaSubirComentarioActionPerformed
 
     private void botonNuevoUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonNuevoUsuarioActionPerformed
-        // TODO add your handling code here:
+        palanca.insertarUsuario(textoNombreUsuario, textoContraseñaUsuario);
     }//GEN-LAST:event_botonNuevoUsuarioActionPerformed
 
     private void botonEdificioListarEdificioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEdificioListarEdificioActionPerformed
