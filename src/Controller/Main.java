@@ -33,4 +33,10 @@ public class Main {
         public void insertarReseña(JTextField nombreObt,JTextField recidenciaObt, JTextField valoraObt, JTextArea comentaObt) {
                 mod.insertarReseña(nombreObt,recidenciaObt,valoraObt,comentaObt);
         }
+        /**
+         * Esto muestra los nombres de los hoteles que hay dentro de la base de datos
+         */
+        public void mostarHoteles(){
+                mod.mostarHoteles();
         }
+}
