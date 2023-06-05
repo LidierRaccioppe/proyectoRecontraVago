@@ -39,4 +39,12 @@ public class Main {
         public void mostarHoteles(){
                 mod.mostarHoteles();
         }
+        /**
+         * muestra las reseñas que sean de ambos campos
+         * @param nombreUserObt el nombre e identificador del usuario que hizo una reseña
+         * @param residenciaObt el nombre e identificador del edificio que fue reseñado
+         */
+        public void mostrarReseña(JTextField nombreUserObt,JTextField residenciaObt){
+                mod.mostrarReseña(nombreUserObt,residenciaObt);
+        }
 }
