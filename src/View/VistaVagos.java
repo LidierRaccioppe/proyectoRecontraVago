@@ -6,6 +6,8 @@ package View;
 
 import Controller.Main;
 
+import javax.swing.*;
+
 /**
  * Clase VistaVagos, para ver el programa, le tome de NetBeans, cualquier problema visual viene de el
  */
@@ -463,7 +465,7 @@ public class VistaVagos extends javax.swing.JFrame {
     }//GEN-LAST:event_botonEdificioListarEdificioActionPerformed
 
     private void botonEdificioListarReseñasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEdificioListarReseñasActionPerformed
-        // TODO add your handling code here:
+        palanca.mostrarReseña( textoNombreUsuario, textoEdificioNombre);
     }//GEN-LAST:event_botonEdificioListarReseñasActionPerformed
 
     private void textoContraseñaUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textoContraseñaUsuarioActionPerformed
