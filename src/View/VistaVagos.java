@@ -459,7 +459,7 @@ public class VistaVagos extends javax.swing.JFrame {
     }//GEN-LAST:event_botonNuevoUsuarioActionPerformed
 
     private void botonEdificioListarEdificioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEdificioListarEdificioActionPerformed
-
+        palanca.mostarHoteles();
     }//GEN-LAST:event_botonEdificioListarEdificioActionPerformed
 
     private void botonEdificioListarReseñasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEdificioListarReseñasActionPerformed
