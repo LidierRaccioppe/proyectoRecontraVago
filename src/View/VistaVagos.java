@@ -5,8 +5,7 @@
 package View;
 
 /**
- *
- * @author Nitropc
+ * Clase de Vista para ver el programa, hecha en NetBeans
  */
 public class VistaVagos extends javax.swing.JFrame {
 
