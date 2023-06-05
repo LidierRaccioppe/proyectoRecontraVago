@@ -7,12 +7,12 @@ package View;
 /**
  * Clase VistaVagos, para ver el programa, le tome de NetBeans, cualquier problema visual viene de el
  */
-public class VistaVagos extends javax.swing.JFrame {
+public class VistaVagostalvez extends javax.swing.JFrame {
 
     /**
      * Creates new form VistaVagos
      */
-    public VistaVagos() {
+    public VistaVagostalvez() {
         initComponents();
     }
 
@@ -50,6 +50,7 @@ public class VistaVagos extends javax.swing.JFrame {
         etiquetaNombreUsuario = new javax.swing.JLabel();
         textoNombreUsuario = new javax.swing.JTextField();
         botonNuevoUsuario = new javax.swing.JButton();
+        botonSesion = new javax.swing.JButton();
         textoContraseñaUsuario = new javax.swing.JPasswordField();
         etiquetaPanelUsuario = new javax.swing.JLabel();
         etiquetaPanelReseña = new javax.swing.JLabel();
@@ -59,9 +60,6 @@ public class VistaVagos extends javax.swing.JFrame {
         botonReseñaSubirComentario = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         campoReseñeaComentario = new javax.swing.JTextArea();
-        jLabel1 = new javax.swing.JLabel();
-        textoReseñaValoracion = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
         etiquetaPanelEdificio = new javax.swing.JLabel();
         panelUsuario4 = new javax.swing.JPanel();
         etiquetaApellidos4 = new javax.swing.JLabel();
@@ -228,9 +226,10 @@ public class VistaVagos extends javax.swing.JFrame {
             }
         });
 
-        textoContraseñaUsuario.addActionListener(new java.awt.event.ActionListener() {
+        botonSesion.setText("Iniciar Sesión");
+        botonSesion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textoContraseñaUsuarioActionPerformed(evt);
+                botonSesionActionPerformed(evt);
             }
         });
 
@@ -239,21 +238,22 @@ public class VistaVagos extends javax.swing.JFrame {
         panelUsuarioLayout.setHorizontalGroup(
             panelUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelUsuarioLayout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(panelUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelUsuarioLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(panelUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(etiquetaNombreUsuario)
-                            .addComponent(etiquetaContraseñaUsuario)
-                            .addComponent(etiquetaApellidos))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(panelUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(textoContraseñaUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE)
-                            .addComponent(textoNombreUsuario)))
-                    .addGroup(panelUsuarioLayout.createSequentialGroup()
-                        .addGap(64, 64, 64)
-                        .addComponent(botonNuevoUsuario)))
+                    .addComponent(etiquetaNombreUsuario)
+                    .addComponent(etiquetaContraseñaUsuario)
+                    .addComponent(etiquetaApellidos))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(panelUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(textoContraseñaUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE)
+                    .addComponent(textoNombreUsuario))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(panelUsuarioLayout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addComponent(botonSesion)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
+                .addComponent(botonNuevoUsuario)
+                .addGap(54, 54, 54))
         );
         panelUsuarioLayout.setVerticalGroup(
             panelUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -266,9 +266,11 @@ public class VistaVagos extends javax.swing.JFrame {
                 .addGroup(panelUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(etiquetaContraseñaUsuario)
                     .addComponent(textoContraseñaUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(botonNuevoUsuario)
-                .addGap(3, 3, 3)
+                .addGap(9, 9, 9)
+                .addGroup(panelUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(botonNuevoUsuario)
+                    .addComponent(botonSesion))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(etiquetaApellidos)
                 .addGap(28, 28, 28))
         );
@@ -294,10 +296,6 @@ public class VistaVagos extends javax.swing.JFrame {
         campoReseñeaComentario.setRows(5);
         jScrollPane1.setViewportView(campoReseñeaComentario);
 
-        jLabel1.setText("Valoración:");
-
-        jLabel2.setText("La valoracion debe ser de 1 a 10");
-
         javax.swing.GroupLayout panelUsuario1Layout = new javax.swing.GroupLayout(panelUsuario1);
         panelUsuario1.setLayout(panelUsuario1Layout);
         panelUsuario1Layout.setHorizontalGroup(
@@ -305,42 +303,33 @@ public class VistaVagos extends javax.swing.JFrame {
             .addGroup(panelUsuario1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(panelUsuario1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(etiquetaReseñaComentario)
-                    .addComponent(jLabel1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
-                .addGroup(panelUsuario1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelUsuario1Layout.createSequentialGroup()
-                        .addGroup(panelUsuario1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(botonReseñaSubirComentario)
-                            .addComponent(etiquetaApellidos1))
-                        .addGap(335, 335, 335))
                     .addGroup(panelUsuario1Layout.createSequentialGroup()
-                        .addGroup(panelUsuario1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 452, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(panelUsuario1Layout.createSequentialGroup()
-                                .addComponent(textoReseñaValoracion, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(35, 35, 35)
-                                .addComponent(jLabel2)))
-                        .addContainerGap())))
+                        .addComponent(etiquetaReseñaComentario)
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane1)
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelUsuario1Layout.createSequentialGroup()
+                        .addGap(0, 86, Short.MAX_VALUE)
+                        .addComponent(botonReseñaSubirComentario)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(etiquetaApellidos1)
+                        .addGap(335, 335, 335))))
         );
         panelUsuario1Layout.setVerticalGroup(
             panelUsuario1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelUsuario1Layout.createSequentialGroup()
-                .addContainerGap(29, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(panelUsuario1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addGroup(panelUsuario1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(textoReseñaValoracion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel2)))
-                .addGap(18, 18, 18)
+                    .addComponent(etiquetaReseñaComentario)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(panelUsuario1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(etiquetaReseñaComentario))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(etiquetaApellidos1)
-                .addGap(14, 14, 14)
-                .addComponent(botonReseñaSubirComentario)
-                .addGap(49, 49, 49))
+                    .addGroup(panelUsuario1Layout.createSequentialGroup()
+                        .addGap(29, 29, 29)
+                        .addComponent(etiquetaApellidos1))
+                    .addGroup(panelUsuario1Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(botonReseñaSubirComentario)))
+                .addGap(74, 74, 74))
         );
 
         etiquetaPanelEdificio.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -416,7 +405,9 @@ public class VistaVagos extends javax.swing.JFrame {
                             .addComponent(panelUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(etiquetaPanelEdificio)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(etiquetaPanelEdificio)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
                                 .addComponent(panelUsuario4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
@@ -428,20 +419,20 @@ public class VistaVagos extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(etiquetaPanelEdificio)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(panelUsuario4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(panelUsuario4, javax.swing.GroupLayout.PREFERRED_SIZE, 120, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(etiquetaPanelUsuario)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(panelUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(18, 18, 18)
+                        .addComponent(panelUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
+                .addGap(7, 7, 7)
                 .addComponent(etiquetaPanelReseña)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(panelUsuario1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(panelUsuario1, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26))
         );
 
         pack();
@@ -451,21 +442,21 @@ public class VistaVagos extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_botonReseñaSubirComentarioActionPerformed
 
+    private void botonSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonSesionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonSesionActionPerformed
+
     private void botonNuevoUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonNuevoUsuarioActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_botonNuevoUsuarioActionPerformed
 
     private void botonEdificioListarEdificioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEdificioListarEdificioActionPerformed
-
+        // TODO add your handling code here:
     }//GEN-LAST:event_botonEdificioListarEdificioActionPerformed
 
     private void botonEdificioListarReseñasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEdificioListarReseñasActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_botonEdificioListarReseñasActionPerformed
-
-    private void textoContraseñaUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textoContraseñaUsuarioActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textoContraseñaUsuarioActionPerformed
 
     /**
      * @param args the command line arguments
@@ -484,20 +475,20 @@ public class VistaVagos extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(VistaVagos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VistaVagostalvez.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(VistaVagos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VistaVagostalvez.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(VistaVagos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VistaVagostalvez.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(VistaVagos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VistaVagostalvez.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new VistaVagos().setVisible(true);
+                new VistaVagostalvez().setVisible(true);
             }
         });
     }
@@ -509,6 +500,7 @@ public class VistaVagos extends javax.swing.JFrame {
     private javax.swing.JButton botonNuevoUsuario1;
     private javax.swing.JButton botonNuevoUsuario2;
     private javax.swing.JButton botonReseñaSubirComentario;
+    private javax.swing.JButton botonSesion;
     private javax.swing.JButton botonSesion1;
     private javax.swing.JButton botonSesion2;
     private javax.swing.JTextArea campoReseñeaComentario;
@@ -531,8 +523,6 @@ public class VistaVagos extends javax.swing.JFrame {
     private javax.swing.JLabel etiquetaPanelUsuario4;
     private javax.swing.JLabel etiquetaPanelUsuario5;
     private javax.swing.JLabel etiquetaReseñaComentario;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JPanel panelUsuario;
     private javax.swing.JPanel panelUsuario1;
@@ -546,6 +536,5 @@ public class VistaVagos extends javax.swing.JFrame {
     private javax.swing.JTextField textoNombreUsuario;
     private javax.swing.JTextField textoNombreUsuario1;
     private javax.swing.JTextField textoNombreUsuario2;
-    private javax.swing.JTextField textoReseñaValoracion;
     // End of variables declaration//GEN-END:variables
 }
