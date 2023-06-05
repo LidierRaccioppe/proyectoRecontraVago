@@ -23,4 +23,14 @@ public class Main {
         public void insertarUsuario(JTextField nombreObt, JPasswordField contraseñaObt){
                 mod.insertarUsuario(nombreObt,contraseñaObt);
         }
-}
+        /**
+         * Metodo para registrar una nueva reseña en la base de datos
+         * @param nombreObt el campo de texto donde esta el nombre e identificador del Usuario
+         * @param recidenciaObt el campo de texto donde esta el nombre e identificador de la Recidencia
+         * @param valoraObt campo de texto donde esta la valoracion de los usuario a la residencia
+         * @param comentaObt area de texto donde esta el comentario que dejo el usuario a la residencia
+         */
+        public void insertarReseña(JTextField nombreObt,JTextField recidenciaObt, JTextField valoraObt, JTextArea comentaObt) {
+                mod.insertarReseña(nombreObt,recidenciaObt,valoraObt,comentaObt);
+        }
+        }
